@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="917.0"
+      prefWidth="1600.0" stylesheets="/css/mainPanel.css" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.mzalewski.spedycjaApp.controller.MainController">
+    <children>
+        <MenuBar prefHeight="27.0" prefWidth="1117.0" stylesheets="@../css/mainPanel.css">
+            <menus>
+                <Menu mnemonicParsing="false" text="Ładunek">
+                    <items>
+                        <MenuItem fx:id="addCargoButton" mnemonicParsing="false" text="Dodaj"/>
+                        <MenuItem fx:id="edditCargoButton" mnemonicParsing="false" text="Edytuj"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pojazd">
+                    <items>
+                        <MenuItem fx:id="addVehicleButton" mnemonicParsing="false" text="Dodaj pojazd"/>
+                        <MenuItem fx:id="removeVehicleButton" mnemonicParsing="false" text="Usuń pojazd"/>
+                        <MenuItem fx:id="editVehicleButton" mnemonicParsing="false" text="Edytuj  pojazd"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Informacje">
+                    <items>
+                        <MenuItem fx:id="aboutProgramButton" mnemonicParsing="false" text="O programie"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="mainPanelTableViwe" prefHeight="847.0" prefWidth="1600.0">
+            <columns>
+                <TableColumn fx:id="vehicleColumnTable" prefWidth="92.0" text="Pojazd"/>
+                <TableColumn fx:id="driverColumnTable" prefWidth="176.0" text="Kierowca"/>
+                <TableColumn fx:id="isPartloadTable" prefWidth="103.0" text="Typ ładunku"/>
+                <TableColumn fx:id="loadingPlaceColumTable" prefWidth="163.0" text="Załadunek"/>
+                <TableColumn fx:id="unloadingPlaceColumnTable" prefWidth="146.0" text="Rozładunek"/>
+                <TableColumn fx:id="cargoColumnTable" minWidth="0.0" prefWidth="147.0" text="Towar"/>
+                <TableColumn fx:id="priceOfCargoColumnTable" prefWidth="102.0" text="Cena za fracht"/>
+                <TableColumn fx:id="dateLoadingColumnTable" prefWidth="125.0" text="Data Załadunku"/>
+                <TableColumn fx:id="dateUnloadingColumnTable" prefWidth="135.0" text="Data rozładunku"/>
+                <TableColumn fx:id="commentsColumnTable" minWidth="0.0" prefWidth="182.0" text="Uwagi"/>
+                <TableColumn fx:id="statusVehicleColumnTable" prefWidth="226.0" text="Status pojazdu"/>
+            </columns>
+        </TableView>
+        <HBox>
+            <children>
+                <Button id="loadedButtonCss" fx:id="loadedCargoButton" mnemonicParsing="false" prefHeight="43.0"
+                        prefWidth="400.0" text="Załadowano towar"/>
+                <Button id="unloadedButtonCss" fx:id="unloadedCargoButton" layoutX="10.0" layoutY="10.0"
+                        mnemonicParsing="false" prefHeight="43.0" prefWidth="400.0" text="Rozładowano towar"/>
+                <Button id="travelToLoadingPlaceButtonCss" fx:id="vehilceTravelToLoadingPlaceButton" layoutX="116.0"
+                        layoutY="10.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="400.0"
+                        text="Pojazd jedzie na załadunek"/>
+                <Button id="cancelCargoButtonCss" fx:id="cancelCargoButton" layoutX="674.0" layoutY="10.0"
+                        mnemonicParsing="false" prefHeight="43.0" prefWidth="400.0" text="Ładunek anulowany"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>

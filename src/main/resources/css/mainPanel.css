@@ -1,0 +1,25 @@
+
+.menu-bar {
+    -fx-font-size: 17px;
+    -fx-border-style: none;
+}
+
+.table-view:row-selection {
+    -fx-font-size: 14px;
+    -fx-border-style: none;
+}
+
+.button {
+    -fx-font-size: 17px;
+}
+
+.table-column {
+    -fx-border-style: none;
+}
+
+.button:hover {
+    -fx-background-color: green;
+}
+
+
+
